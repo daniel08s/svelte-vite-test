@@ -1,0 +1,29 @@
+@media (prefers-color-scheme: light) {
+    :root {
+        --color-background: #ffe4d6;
+        --color-primary: #ffb4a2;
+        --color-secondary: #e5989b;
+        --color-tertiary: #93a392;
+        --color-headline: #b5838d;
+        --color-button: #93a392;
+        --color-button-text: #b5838d;
+        --color-paragraph: #6d6875;
+        --color-stroke: #b5838d;
+        --color-highlight: #ffe4d6; /* #9DC4B5 */
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-background: hsl(0deg, 0%, 0%);
+        --color-primary: hsl(0deg, 0%, 10%);
+        --color-secondary: hsl(0deg, 0%, 20%);
+        --color-tertiary: hsl(0deg, 0%, 40%);
+        --color-headline: hsl(0deg, 0%, 100%);
+        --color-button: hsl(0deg, 0%, 40%);
+        --color-button-text: hsl(0deg, 0%, 100%);
+        --color-paragraph: hsl(0deg, 0%, 80%);
+        --color-stroke: hsl(0deg, 0%, 100%);
+        --color-highlight: hsl(0deg, 0%, 0%);
+    }
+}

@@ -1,0 +1,76 @@
+<script lang="ts">
+    import ThemeSwitch from '$lib/components/ThemeSwitch.svelte';
+</script>
+
+<div class="footer bg-primary-focus">
+    <ul>
+        <li class="underline"><a href="https://github.com/iskilled">Github</a></li>
+        <li><ThemeSwitch /></li>
+        <li class="hand">👋</li>
+    </ul>
+</div>
+
+<style>
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+    }
+
+    div.footer {
+        display: flex;
+        height: 5vh;
+        width: 100%;
+        line-height: 2;
+        font-family: Menlo, monospace;
+    }
+
+    ul {
+        display: inline-grid;
+        grid-auto-flow: row;
+        grid-gap: 24px;
+        justify-items: center;
+        margin: auto;
+    }
+
+    li {
+        list-style-type: none;
+    }
+
+    @media (min-width: 500px) {
+        ul {
+            grid-auto-flow: column;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        box-shadow: inset 0 -1px 0 hsla(0, 0%, 100%, 0.4);
+    }
+
+    a:hover {
+        box-shadow: inset 0 -1.2em 0 hsla(0, 0%, 100%, 0.4);
+    }
+
+    li:last-child {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+
+    li:hover ~ li.hand {
+        animation: wave-animation 0.3s infinite;
+    }
+
+    @keyframes wave-animation {
+        0%,
+        100% {
+            transform: rotate(0deg);
+        }
+        25% {
+            transform: rotate(20deg);
+        }
+        75% {
+            transform: rotate(-15deg);
+        }
+    }
+</style>
