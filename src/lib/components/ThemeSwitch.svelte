@@ -26,4 +26,5 @@
     <option value="cupcake">Cupcake</option>
     <option value="night">Dark</option>
     <option value="mytheme">My Theme</option>
+    <option value="chalk">Chalk</option>
 </select>

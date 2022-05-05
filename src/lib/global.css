@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    --base-100: #c0c0c0;
+    /* or any other variables/style */
+}
+[data-theme='mytheme'] {
+    --base-100: #ffe4d6;
+}
+[data-theme='chalk'] {
+    --base-100: #f6f4ee;
+}

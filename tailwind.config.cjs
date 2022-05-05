@@ -4,7 +4,21 @@ module.exports = {
     },
     content: ['./src/**/*.{html,js,svelte,ts}'],
     theme: {
-        extend: {},
+        extend: {
+            keyframes: {
+                wiggle: {
+                    '0%, 100%': {
+                        transform: 'rotate(9deg)',
+                    },
+                    '50%': {
+                        transform: 'rotate(-9deg)',
+                    },
+                },
+            },
+            animation: {
+                wiggle: 'wiggle 0.3s ease-in-out infinite',
+            },
+        },
     },
     plugins: [require('daisyui')],
     daisyui: {
@@ -17,6 +31,13 @@ module.exports = {
                     accent: '#93a392',
                     neutral: '#ffb4a2',
                     'base-100': '#ffe4d6',
+                },
+                chalk: {
+                    primary: '#dbd3bc',
+                    secondary: '#dbc8bd',
+                    accent: '#93a392',
+                    neutral: '#ffb4a2',
+                    'base-100': '#f6f4ee',
                 },
             },
             'synthwave',

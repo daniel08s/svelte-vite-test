@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="mytheme">
+<html lang="en" data-theme="chalk">
     <head>
         <meta charset="utf-8" />
         <meta name="description" content="" />
@@ -16,12 +16,19 @@
         %svelte.head%
     </head>
     <body>
-        <div>%svelte.body%</div>
+        <div class="body-content">%svelte.body%</div>
     </body>
 </html>
 
-<style>
+<style lang="scss">
+    html {
+        height: 100%;
+    }
     body {
+        height: 100%;
         font-family: 'Baloo Paaji 2', cursive;
+    }
+    .body-content {
+        height: 100%;
     }
 </style>

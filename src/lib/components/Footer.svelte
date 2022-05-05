@@ -2,12 +2,34 @@
     import ThemeSwitch from '$lib/components/ThemeSwitch.svelte';
 </script>
 
-<div class="footer bg-primary-focus">
-    <ul>
-        <li class="underline"><a href="https://github.com/iskilled">Github</a></li>
-        <li><ThemeSwitch /></li>
-        <li class="hand">👋</li>
-    </ul>
+<!-- <div class="footer">
+    <div class="container bg-primary-focus">
+        <ul>
+            <li class="underline"><a href="https://github.com/iskilled">Github</a></li>
+            <li><ThemeSwitch /></li>
+            <li class="hand">👋</li>
+        </ul>
+    </div>
+</div> -->
+
+<div class="footer">
+    <div class="left-container bg-base-300">
+        <span>
+            🐱‍👓
+            <a href="https://github.com/iskilled">
+                <span class="underline">Github</span>
+            </a>
+            🐱‍👓
+        </span>
+    </div>
+
+    <div class="middle-container bg-base-300">
+        <span class="hand hover:animate-wiggle">👋👋👋</span>
+    </div>
+
+    <div class="right-container bg-base-300">
+        <ThemeSwitch />
+    </div>
 </div>
 
 <style>
@@ -20,9 +42,40 @@
     div.footer {
         display: flex;
         height: 5vh;
-        width: 100%;
+        justify-content: space-between;
+        padding-bottom: 10px;
         line-height: 2;
         font-family: Menlo, monospace;
+    }
+
+    .footer > div {
+        width: 10vw;
+        height: 7vh;
+    }
+
+    .left-container {
+        justify-content: flex-start;
+        align-self: center;
+        align-content: center;
+        padding-left: 15px;
+        border-top-right-radius: 4vw;
+    }
+
+    .middle-container {
+        width: 9vw !important;
+        justify-content: center;
+        align-self: baseline;
+        align-content: center;
+        border-top-left-radius: 4vw;
+        border-top-right-radius: 4vw;
+    }
+
+    .right-container {
+        justify-content: flex-end;
+        align-content: center;
+        align-self: center;
+        padding-right: 15px;
+        border-top-left-radius: 4vw;
     }
 
     ul {
@@ -57,7 +110,7 @@
         grid-row: 1 / 2;
     }
 
-    li:hover ~ li.hand {
+    /* li.hand:hover {
         animation: wave-animation 0.3s infinite;
     }
 
@@ -72,5 +125,5 @@
         75% {
             transform: rotate(-15deg);
         }
-    }
+    } */
 </style>

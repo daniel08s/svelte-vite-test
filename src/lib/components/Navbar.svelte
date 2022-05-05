@@ -1,6 +1,6 @@
-<nav class="bg-primary-focus">
+<nav class="">
     <div class="flex" style="width: 60px; height: 60px;"><img src="static/logo.svg" alt="logo" /></div>
-    <div class="links text-primary font-bold underline">
+    <div class="links base-content font-bold underline">
         <a href="/">Home</a>
         <a href="/about">About</a>
         <a href="/users">Users</a>
